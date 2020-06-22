@@ -10,7 +10,7 @@ Couleurs utilisées sur la plupart des pages :
 
 
 
-![Web 1920 – 1](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 1.png)
+![Web 1920 – 1](/Other/AdobeXD/Images/Web1920-1.png)
 
 
 
@@ -18,7 +18,7 @@ Modal à l'arrivée du site (Non conservé)
 
 
 
-![Web 1920 – 2](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 2.png)
+![Web 1920 – 2](/Other/AdobeXD/Images/Web1920-2.png)
 
 Page d'accueil
 
@@ -26,7 +26,7 @@ Page d'accueil
 
 
 
-![Web 1920 – 4](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 4.png)
+![Web 1920 – 4](/Other/AdobeXD/Images/Web1920-4.png)
 
 Couleurs utilisées: 
 
@@ -38,11 +38,11 @@ Couleurs utilisées:
 
 Au click sur l'image (Version User connected)
 
-![Web 1920 – 7](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 7.png)
+![Web 1920 – 7](/Other/AdobeXD/Images/mofid.png)
 
 Au click sur l'image (Version User Disconnected)
 
-![Web 1920 – 5](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 5.png)
+![Web 1920 – 5](/Other/AdobeXD/Images/Web1920-5.png)
 
 Profil de l'utilisateur (Version User Connected)
 
@@ -56,6 +56,6 @@ Couleurs utilisées:
 
 
 
-![Web 1920 – 6](C:\laragon\www\projetPinterest\Other\AdobeXD\Images\Web 1920 – 6.png)
+![Web 1920 – 6](/Other/AdobeXD/Images/Web1920-6.png)
 
 Profil de l'utilisateur (Version User Disconnected)
