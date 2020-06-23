@@ -8,11 +8,12 @@
     <title>Pinkerton</title>
     <link rel="stylesheet" href="{{URL::asset('/css/grid.css')}}">
 </head>
-<body>
-<?php
+<body class="wrapper">
+@php
     function createCards(){
-        return '<div><img src="" alt=""></div>';
+    echo '<div><img src="" alt="image"></div>';
     }
-?>
+    createCards();
+@endphp
 </body>
 </html>
