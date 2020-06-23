@@ -23,7 +23,7 @@ Modal à l'arrivée du site (Non conservé)
 Page d'accueil
 
 
-![Web 1920 – 8](/Other/AdobeXD/Images/Web1920-6.png)
+![Web 1920 – 8](/Other/AdobeXD/Images/Web1920-8.png)
 
 Menu Dropdown
 Couleurs utilisées: 
