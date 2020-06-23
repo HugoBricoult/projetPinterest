@@ -23,7 +23,12 @@ Modal à l'arrivée du site (Non conservé)
 Page d'accueil
 
 
+![Web 1920 – 8](/Other/AdobeXD/Images/Web1920-6.png)
 
+Menu Dropdown
+Couleurs utilisées: 
+#FCAC40
+#FED59E
 
 
 ![Web 1920 – 4](/Other/AdobeXD/Images/Web1920-4.png)
