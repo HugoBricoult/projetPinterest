@@ -1,0 +1,33 @@
+body {
+  margin: 0; }
+
+.wrapper {
+  width: 1200px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 50px; }
+  .wrapper div {
+    width: 100%;
+    break-inside: avoid;
+    overflow: hidden;
+    margin-bottom: 10px; }
+    .wrapper div img {
+      max-width: 100%;
+      border-radius: 30px;
+      display: flex;
+      margin: 0 auto; }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    columns: 3;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    padding: 20px 20px 20px 0; } }
+@media (max-width: 768px) {
+  .wrapper {
+    columns: 2; } }
+@media (max-width: 480px) {
+  .wrapper {
+    columns: 1; } }
+
+/*# sourceMappingURL=grid.css.map */
