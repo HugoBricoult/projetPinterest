@@ -1,0 +1,22 @@
+body{
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.back-login{
+    border-radius:15px;
+}
+.back-login h1{
+    font-size: 50px;
+    color:#E48E0B;
+}
+.back-login p{
+    font-size: 25px;
+    color:#E48E0B;
+}
+button{
+    background-color:#FCAC40;
+    border:none;
+    border-radius:15px;
+    color:white;
+}
