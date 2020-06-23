@@ -10,11 +10,12 @@ Couleurs utilisées sur la plupart des pages :
 
 
 
-![Web 1920 – 1](/Other/AdobeXD/Images/Web1920-1.png)
+![Web 1920 – 1](/Other/AdobeXD/Images/Web1920-1bis.png)
 
 
 
-Modal à l'arrivée du site (Non conservé)
+Login
+
 
 
 
