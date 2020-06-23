@@ -11,7 +11,7 @@
 <body>
 <?php
     function createCards(){
-
+        return '<div><img src="" alt=""></div>';
     }
 ?>
 </body>
