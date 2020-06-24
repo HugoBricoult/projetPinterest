@@ -11,12 +11,17 @@ body{
     break-inside: avoid;
     overflow: hidden;
     margin-bottom: 10px;
-    img{
+      h3
+      {
+          text-align: center;
+      }
+      img
+      {
       max-width: 100%;
       border-radius: 30px;
       display: flex;
       margin: 0 auto;
-    }
+      }
   }
 }
 @media (max-width: 1200px) {

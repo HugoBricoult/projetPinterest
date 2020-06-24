@@ -11,6 +11,8 @@ body {
     break-inside: avoid;
     overflow: hidden;
     margin-bottom: 10px; }
+    .wrapper div h3 {
+      text-align: center; }
     .wrapper div img {
       max-width: 100%;
       border-radius: 30px;

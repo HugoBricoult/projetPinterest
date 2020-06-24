@@ -24,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('accueil');
+        $post = Post::get();
+        dd($post);
+        return view('accueil',compact('post'));
     }
 }
