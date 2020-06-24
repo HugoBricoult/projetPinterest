@@ -11,9 +11,9 @@
 <body class="wrapper">
 @php
     function createCards(){
-    echo '<div><img src="" alt="image"></div>';
+    return '<div><img src="" alt="image"></div>';
     }
-    createCards();
+    echo createCards();
 @endphp
 </body>
 </html>
