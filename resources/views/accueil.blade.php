@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="{{URL::asset('/css/grid.css')}}">
 </head>
 <body class="wrapper">
-@php
-    function createCards(){
-    return '<div><img src="" alt="image"></div>';
-    }
-    echo createCards();
-@endphp
+@foreach($post as $data)
+    <div>
+        <h3>{{$data['title']}}</h3>
+        <img src="{{$data['image_link']}}" alt="{{$data['description']}}">
+    </div>
+@endforeach
 </body>
 </html>
