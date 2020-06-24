@@ -10,10 +10,11 @@
 </head>
 <body class="wrapper">
 @foreach($post as $data)
-    <div>
+    <article class="cardwrap">
         <h3>{{$data['title']}}</h3>
         <img src="{{$data['image_link']}}" alt="{{$data['description']}}">
-    </div>
+            <p>{{$data['description']}}</p>
+    </article>
 @endforeach
 </body>
 </html>
