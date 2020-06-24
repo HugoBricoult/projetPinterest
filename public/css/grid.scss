@@ -46,15 +46,15 @@ body{
       }
       img
       {
-          grid-column: 1/7;
-          grid-row: 1/7;
-        max-width: 100%;
-          min-width: 250px;
-          min-height: 300px;
-        border-radius: 30px;
-        display: flex;
-        margin: 0 auto;
-          transition: ease-in-out 0.5s;
+            grid-column: 1/7;
+            grid-row: 1/7;
+            max-width: 100%;
+            min-width: 250px;
+            min-height: 300px;
+            border-radius: 30px;
+            display: flex;
+            margin: 0 auto;
+            transition: ease-in-out 0.5s;
 
       }
   }
