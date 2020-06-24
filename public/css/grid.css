@@ -19,7 +19,7 @@ body {
     .wrapper .cardwrap:hover p {
       opacity: 1; }
     .wrapper .cardwrap:hover img {
-      filter: blur(5px) opacity(80%); }
+      filter: blur(3px) opacity(80%); }
     .wrapper .cardwrap h3 {
       text-align: center;
       grid-column: 1/7;

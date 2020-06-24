@@ -7,13 +7,13 @@ body{
         columns: 4;
         column-gap: 50px;
   .cardwrap{
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 10px;
-      display: grid;
-      grid-template-columns: repeat(5,1fr);
-      grid-template-rows: repeat(5,1fr);
-      transition: ease-in-out 0.5s;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(5,1fr);
+        transition: ease-in-out 0.5s;
       &:hover{
           h3{
               opacity: 1;
@@ -22,7 +22,7 @@ body{
               opacity: 1;
           }
           img{
-              filter: blur(5px) opacity(80%);
+              filter: blur(3px) opacity(80%);
           }
       }
       h3{
