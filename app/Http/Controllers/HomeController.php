@@ -24,7 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
         return view('home');
     }
 }
