@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    @yield('style_login')
 </head>
 <body>
     <div id="app">

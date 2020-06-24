@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<head>
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+</head>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
