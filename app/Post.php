@@ -9,4 +9,5 @@ class Post extends Model
     protected $fillable = [
         'image_link','title', 'description', 'author_id'
     ];
+
 }
