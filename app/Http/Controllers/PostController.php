@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function _construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +30,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('posts.create');
     }
 
     /**
@@ -35,7 +42,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'title'=>['required', 'string'],
+            'image'=>['required', 'image']
+        ]);
+
+        $imagePath = request('image')->store('uploads', 'public');
+
+        auth()->user()->posts()->create([
+            'title' => $data['title'],
+            'image' => $imagePath
+        ]);
+
+        return redirect()->route('show.posts', ['user' => auth()->user()]);
     }
 
     /**
