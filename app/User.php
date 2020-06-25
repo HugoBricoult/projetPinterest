@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name','last_name', 'email', 'password','image_profile_link','image_cover_link','pseudo'
     ];
 
     /**
@@ -36,4 +36,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //id user en paramètre
+    public function follow(){
+        return $this->hasMany('App\Follow','user_id');
+    }
+
+    public function pint(){
+        return $this->hasMany('App\Pint','user_id');
+    }
+
+    public function posts(){
+        return $this->hasMany('App\Post','author_id');
+    }
 }
