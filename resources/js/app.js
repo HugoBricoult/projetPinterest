@@ -30,3 +30,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+import * as responsive_waterfall from './responsive_waterfall.js';
+let waterfall = new Waterfall({ 
+    containerSelector: '.wf-container',
+    boxSelector: '.wf-box',
+    minBoxWidth: 250
+});

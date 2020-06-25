@@ -25,5 +25,7 @@ Route::get('profile/{id}/abonnements', 'ProfileController@show')->name('show.abo
 
 Auth::routes();
 
+Route::get('/logout','LogoutController@index');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
