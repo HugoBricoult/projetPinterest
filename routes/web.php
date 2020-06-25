@@ -14,14 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $post = Post::get()->toArray();
-    return view('accueil',compact('post'));
-});
+Route::get('/','AccueilController@index');
 
-Route::get('profile/{id}/posts', 'ProfileController@show')->name('show.posts');
-Route::get('profile/{id}/pints', 'ProfileController@show')->name('show.pints');
-Route::get('profile/{id}/abonnements', 'ProfileController@show')->name('show.abonnements');
+Route::get('profile/{id}/{section}', 'ProfileController@show')->name('show.posts');
 
 Auth::routes();
 

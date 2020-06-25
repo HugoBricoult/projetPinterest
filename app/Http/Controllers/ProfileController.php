@@ -46,18 +46,25 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function show($id)
+    public function show($id,$section)
     {
-        $post = User::find($id)->posts->toArray();
-        $posts_id = User::find($id)->pint->pluck('post_id');
-        $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();
         $user = User::find($id);
-
-
-        // dd($posts_id);        
-        // dd($pints);
-        // dd($post,$user);
-        return view('profile.show', compact('user','post','pint'));
+        switch($section){
+            case "posts":
+                $post = User::find($id)->posts->toArray();
+                return view('profile.post', compact('post','user'));
+            break;
+            case "pint":
+                $posts_id = User::find($id)->pint->pluck('post_id');
+                $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();
+                return view('profile.show', compact('pint'));
+            break;
+            case "follow":
+                $user_id = User::find($id)->follow->pluck('user_follow_id');
+                $posts = Post::whereIn('author_id',$user_id)->latest()->get()->toArray();
+                return view('profile.show', compact('posts'));
+            break;
+        }
     }
 
 

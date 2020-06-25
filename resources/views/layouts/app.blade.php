@@ -17,10 +17,10 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL::asset('/css/grid.css')}}">
 </head>
 
 <!-- nav -->
@@ -28,7 +28,6 @@
 <nav class="navbar navbar-light bg-light">
     <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
         <a class="nav-item nav-link" href="/">Accueil</a>
-        <a class="nav-item nav-link" href="#">Abonnements</a>
     </div>
 </nav>
 
@@ -38,8 +37,27 @@
     @if (Route::has('login'))
             <div class="top-right links">
         @auth
-            <a class="nav-item" href="/logout">Se deconnecter</a>
-    @else
+        <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <a class="dropdown-item" href="/profile/{{Auth::user()->id}}/posts">
+                    Profile
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
+        </li>
+        @else        
             <a class="nav-item" href="{{ route('login') }}">Login</a>
 
             @if (Route::has('register'))
