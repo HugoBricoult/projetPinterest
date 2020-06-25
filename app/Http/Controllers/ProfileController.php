@@ -8,36 +8,6 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -52,53 +22,18 @@ class ProfileController extends Controller
         switch($section){
             case "posts":
                 $post = User::find($id)->posts->toArray();
-                return view('profile.post', compact('post','user'));
+                return view('profile.post', compact('post','user'))->with('id',$id);
             break;
             case "pint":
                 $posts_id = User::find($id)->pint->pluck('post_id');
                 $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();
-                return view('profile.show', compact('pint'));
+                return view('profile.pint', compact('pint','user'))->with('id',$id);
             break;
             case "follow":
                 $user_id = User::find($id)->follow->pluck('user_follow_id');
                 $posts = Post::whereIn('author_id',$user_id)->latest()->get()->toArray();
-                return view('profile.show', compact('posts'));
+                return view('profile.follow', compact('posts','user'))->with('id',$id);
             break;
         }
-    }
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

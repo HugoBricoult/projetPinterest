@@ -10976,6 +10976,12 @@ body {
   border-radius: 10px;
 }
 
+.profile {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+}
+
 .nav-item:hover {
   background-color: #E48E0B;
   color: #fff;

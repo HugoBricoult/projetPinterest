@@ -37,9 +37,9 @@
     @if (Route::has('login'))
             <div class="top-right links">
         @auth
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown profile">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }} <span class="caret"></span>
+                {{ Auth::user()->first_name }}<span class="caret"></span>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -1,5 +1,5 @@
-<!-- Pinted -->
-    
+@extends('/layouts.layoutProfil')
+@section('profile_content')
     <div class="card-columns">
         @php $i=0; @endphp
         @foreach ($pint as $objet)
@@ -8,4 +8,4 @@
         </div>
         @php $i++; @endphp
         @endforeach
-    </div>
+@endsection
