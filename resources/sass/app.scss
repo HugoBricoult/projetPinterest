@@ -1,8 +1,122 @@
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,400&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+html, body {
+    background-color:$body-bg;
+    color: $primary;
+    font-family: 'Asap', sans-serif;
+    font-weight:200;
+    height:100vh;
+    margin:0;
+}
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+
+    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.nav-item{
+    border-radius: 10px;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+}
+.nav-item:hover{
+    background-color: $primary;
+    color:$bg;
+}
+
+// WATERFALL
+
+.wf-container { 
+    margin: 10 auto;
+}
+
+.wf-container:before,
+.wf-container:after {
+  content: '';
+  display: table;
+}
+
+.wf-container:after { clear: both; }
+
+.wf-box { 
+    margin: 10px; 
+    width: 200px;
+}
+
+.wf-box img {
+  display: block;
+  width: 100%;
+}
+
+.wf-box .content {
+  border: 1px solid #ccc;
+  border-top-width: 0;
+  padding: 5px 8px;
+}
+
+.wf-column { float: left; }
+
+
+@media screen and (min-width: 768px) {
+
+    .wf-container { width: 750px; }
+    
+    }
+    
+    @media screen and (min-width: 992px) {
+    
+    .wf-container { width: 970px; }
+    
+    }
+    
+    @media screen and (min-width: 1200px) {
+    
+    .wf-container { width: 1170px; }
+    
+    }

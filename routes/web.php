@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','AccueilController@index');
+
+Route::get('profile/{id}/{section}', 'ProfileController@show')->name('show.posts');
 
 Auth::routes();
+
+Route::get('/logout','LogoutController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

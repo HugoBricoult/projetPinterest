@@ -49701,10 +49701,6 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
-  el: '#app'
-});
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -49839,8 +49835,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\projetPinterest\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\projetPinterest\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\hugob\Documents\GitHub\projetPinterest\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\hugob\Documents\GitHub\projetPinterest\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
