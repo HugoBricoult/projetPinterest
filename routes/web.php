@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('accueil',compact('post'));
 });
 
+Route::get('profile/{id}/posts', 'ProfileController@show')->name('show.posts');
+Route::get('profile/{id}/pints', 'ProfileController@show')->name('show.pints');
+Route::get('profile/{id}/abonnements', 'ProfileController@show')->name('show.abonnements');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
