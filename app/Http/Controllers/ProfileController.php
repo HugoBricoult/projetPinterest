@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\User;
+use App\Post;
 use Illuminate\Http\Request;
+
 
 class ProfileController extends Controller
 {
@@ -47,9 +48,18 @@ class ProfileController extends Controller
 
     public function show($id)
     {
-        $user = User::find($id)->posts->toArray();
-         return view('profile.show', compact('user'));
+        $post = User::find($id)->posts->toArray();
+        $posts_id = User::find($id)->pint->pluck('post_id');
+        $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();
+        $user = User::find($id);
+
+
+        // dd($posts_id);        
+        // dd($pints);
+        // dd($post,$user);
+        return view('profile.show', compact('user','post','pint'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('profile/{id}', 'ProfileController@show')->name('profile.show');
+Route::get('profile/{id}/posts', 'ProfileController@show')->name('show.posts');
+Route::get('profile/{id}/pints', 'ProfileController@show')->name('show.pints');
+Route::get('profile/{id}/abonnements', 'ProfileController@show')->name('show.abonnements');
 
 Auth::routes();
 
