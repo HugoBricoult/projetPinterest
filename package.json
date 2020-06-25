@@ -24,6 +24,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "child_process": "^1.0.2",
+        "fs": "0.0.1-security",
         "waterfall": "^3.0.1"
     }
 }

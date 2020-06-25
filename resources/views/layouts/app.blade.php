@@ -3,6 +3,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,10 +35,11 @@
 
 <body>
 
+
     @if (Route::has('login'))
             <div class="top-right links">
         @auth
-            
+            <a class="nav-item" href="/logout">Se deconnecter</a>
     @else
             <a class="nav-item" href="{{ route('login') }}">Login</a>
 
@@ -52,5 +54,6 @@
     @yield('content')
 
 </body>
+
 
 </html>
