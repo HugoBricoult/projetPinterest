@@ -38,6 +38,9 @@ class ProfileController extends Controller
                 $posts = Post::whereIn('author_id',$user_id)->latest()->get()->toArray();
                 return view('profile.follow', compact('posts','user'))->with('id',$id);
             break;
+            case "edit":
+                return view('profile.edit',compact('user'))->with('id',$id);
+            break;
         }
     }
 }

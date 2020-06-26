@@ -20,16 +20,9 @@
         <div class="col-3">
             <div class="d-flex">
                 <div class="h3 mr-3 font-weight-bold">{{ $user->pseudo }}</div>
-                
             </div>
         </div>
 
-        <!-- description -->
-        <div class="col-4">
-            <div class="d-flex">
-                <div class="mr-3 pt-4">I m a big fan of Steve Jobs and his work ! <br> I love Apple <3</div>
-            </div>
-        </div>
 
         <!-- button -->
         @auth
@@ -40,6 +33,12 @@
                     </div>
                 </div>
             @endif
+        @endauth
+
+        @auth
+                    @if(Auth::user()->id == $id)
+                    <a href="{{ route('profile.edit',array('id'=>$id) )}}">Modifier</a>
+                    @endif
         @endauth
         
 
