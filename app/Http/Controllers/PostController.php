@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 
+
 class PostController extends Controller
 {
     /**
@@ -35,7 +36,24 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        if ($request->file('file')) {
+            $imagePath = $request->file('file');
+            $imageName = $imagePath->getClientOriginalName();
+
+            $path = $request->file('file')->storeAs('uploads', $imageName, 'public');
+            $path = 'storage/'.$path;
+            Post::create([
+                'title' => $request['title'],
+                'description' => $request['description'],
+                'author_id' => $request['author_id'],
+                'image_link' => $path
+            ]);
+                return redirect('/profile/'.$request['author_id'].'/posts');
+        }
     }
 
     /**

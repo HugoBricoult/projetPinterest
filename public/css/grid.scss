@@ -9,7 +9,7 @@ body{
   .cardwrap{
         width: 100%;
         overflow: hidden;
-      border-radius: 30px;
+        border-radius: 30px;
         margin-bottom: 20px;
         display: grid;
         grid-template-columns: repeat(5,1fr);
@@ -77,3 +77,4 @@ body{
     columns: 1;
   }
 }
+ 

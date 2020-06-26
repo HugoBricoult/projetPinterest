@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('image_link');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->integer('author_id');
             $table->timestamps();
         });
