@@ -57,10 +57,10 @@
             </div>
         </li>
         @else
-            <a class="nav-item" href="{{ route('login') }}">Login</a>
+            <li class="nav-item offset-md-8 col-md-1 col-12 text-center"><a href="{{ route('login') }}">Login</a></li>
 
             @if (Route::has('register'))
-            <a class="nav-item"  href="{{ route('register') }}">Register</a>
+            <li class="nav-item col-md-1 col-12 text-center"><a href="{{ route('register') }}">Register</a></li>
             @endif
 
         @endauth
