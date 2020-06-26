@@ -20,7 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{URL::asset('/css/grid.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/marcofall.css')}}">
 </head>
 
 <!-- nav -->
@@ -71,6 +71,7 @@
     @yield('content')
 
 </body>
+<script src="{{URL::asset('/js/waterfall.js')}}"></script>
 
 
 </html>
