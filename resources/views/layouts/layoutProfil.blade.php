@@ -2,8 +2,15 @@
 
 @section('content')
 
-<div class="container">
+@php 
+$user1= Auth::user()->id;
+$user2=$id;
+if ($user1==$user2){
+$visibility="visibility:hidden";}
+else{$visibility="background-color:#ffb443";};
+@endphp
 
+<div class="container">
 
     <!-- bannière -->
     <div class="row mb-n5">
@@ -34,7 +41,7 @@
         <!-- button -->
         <div class="col-2">
             <div class="d-flex">
-                <button class="btn btn-lg pt-1 pb-1 font-weight-bold" style="background-color:#ffb443" >S'abonner</button>
+                <button class="btn btn-lg pt-1 pb-1 font-weight-bold" style="@php echo $visibility; @endphp ">S'abonner</button>
             </div>
         </div>
 
