@@ -85,6 +85,10 @@ color: $secondary;
 .nav-item:hover{
     background-color: $primary;
     color:$bg;
+    a{
+        color:$bg !important;
+        text-decoration: none !important;
+    }
 }
 
 // WATERFALL

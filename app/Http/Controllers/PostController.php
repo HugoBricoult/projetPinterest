@@ -22,7 +22,7 @@ class PostController extends Controller
 
         $post['author_name']=$user->first_name;
 
-        return view('post',compact('post'));
+        return view('post',compact('post','user'));
     }
 
     /**

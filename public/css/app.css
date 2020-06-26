@@ -7527,7 +7527,7 @@ button.bg-dark:focus {
 }
 
 .justify-content-between {
-    justify-content: space-between !important;
+  justify-content: space-between !important;
 }
 
 .justify-content-around {
@@ -11006,6 +11006,11 @@ body {
   color: #fff;
 }
 
+.nav-item:hover a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 .wf-container {
   margin: 10 auto;
 }
@@ -11040,7 +11045,7 @@ body {
   float: left;
 }
 
-.view {
+.postview {
   width: 50% auto;
   padding: 1%;
   margin: 5%;
@@ -11060,6 +11065,10 @@ body {
 .sub-button:hover {
   background-color: #353535;
   color: #fff !important;
+}
+
+.content-article {
+  border: 2px solid gray;
 }
 
 @media screen and (min-width: 768px) {

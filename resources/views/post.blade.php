@@ -9,7 +9,7 @@
             <div class="d-flex flex-wrap flex-column col-md-6 border border-grey rounded-right text-dark">
                 <h2>{{$post['title']}}</h2>
                 <p> {{$post['description']}} </p>
-                <a href="" class="btn btn-secondary">By:{{$post['author_name']}}</a>
+                <a href="/profile/{{$user->id}}/posts" class="btn btn-secondary">By:{{$post['author_name']}}</a>
             </div>
 
     </div>
