@@ -18,7 +18,7 @@ Route::get('/','AccueilController@index');
 
 Route::get('profile/{id}/{section}', 'ProfileController@show')->name('show.posts');
 
-Route::post('profile/{id}/{section}','FollowController@store')->name('follow.user');
+//Route::post('profile/{id}/{section}','FollowController@store')->name('follow.user');
 
 Auth::routes();
 
