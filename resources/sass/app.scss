@@ -59,7 +59,7 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
-.navbar{
+.navbar{ 
     background-color:$secondary;
     color:$primary;
     font-weight: bold;
@@ -69,13 +69,14 @@ html, body {
 }
 #navbarDropdown{
     border-radius: 10px;
-    color: $primary;
+    color: $bg;
     font-weight: bold;
 }
 #navbarDropdown:hover{
 background-color: $bg;
 font-weight: bold;
 color: $secondary;
+
 }
 .profile{
     display: flex;
