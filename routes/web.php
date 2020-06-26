@@ -34,3 +34,4 @@ Route::get('/post/{id}','PostController@index');
 Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');
 
 Route::get('profile/{id}/edit','EditController@edit')->name('profile.edit');
+Route::post('profile/{id}/edit','EditController@update');

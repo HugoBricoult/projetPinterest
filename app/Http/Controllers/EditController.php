@@ -69,7 +69,13 @@ class EditController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'img_cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $request->validate([
+            'img_edit' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        
     }
 
     /**

@@ -1,10 +1,10 @@
 @extends('/layouts.layoutProfil')
 
 @section('profile_content')
-<div class="container">
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6 mt-5">
-            <div class="card back-login">
+            <div class="card back-login ">
                 <h1 class="text-center mt-4">P</h1>
                 <p class="text-center">Que voulez vous modifier ?</p>
 
@@ -59,6 +59,42 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-3 custom-file">
+                                <input type="file" name="img_edit" class="custom-file-input @error('image') is-invalid @enderror" id="validatedCustomFile">
+                                <label class="custom-file-label" for="validatedCustomFile">Choisir une image</label>
+                                @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        
+                        
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-3 custom-file">
+                                <input type="file" name="img_cover" class="custom-file-input @error('image') is-invalid @enderror" id="validatedCustomFile">
+                                <label class="custom-file-label" for="validatedCustomFile">Choisir une image</label>
+                                @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        
+                        
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-3">
+                                <button type="submit" class="btn btn-primary">
+                                    Enregistrer les modifications
+                                </button>
                             </div>
                         </div>
 
