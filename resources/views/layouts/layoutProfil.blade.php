@@ -20,6 +20,7 @@
         <div class="col-3">
             <div class="d-flex">
                 <div class="h3 mr-3 font-weight-bold">{{ $user->pseudo }}</div>
+                
             </div>
         </div>
 
