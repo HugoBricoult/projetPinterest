@@ -18,6 +18,8 @@ Route::get('/','AccueilController@index');
 
 Route::get('profile/{id}/{section}', 'ProfileController@show')->name('show.posts');
 
+Route::post('profile/{id}/{section}','FollowController@store')->name('follow.user');
+
 Auth::routes();
 
 Route::get('/logout','LogoutController@index');
@@ -27,3 +29,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post/{id}','PostController@index');
 
 Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');
+
+
