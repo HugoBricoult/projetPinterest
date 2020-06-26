@@ -8,9 +8,9 @@
                 <div class="card-header">Créer un post</div>
 
                 <div class="card-body">
-                    <form method="POST" action="../../profile/{{Auth::user()->id}}/posts-create"  enctype="multipart/form-data">
+                    <form method="POST" action="/profile/{{Auth::user()->id}}/posts-create"  enctype="multipart/form-data">
                         @csrf
-
+                        <input type="hidden" name="author_id" value="{{ Auth::user()->id }}">
                         <div class="form-group">
                             <label for="title">Title</label>
 

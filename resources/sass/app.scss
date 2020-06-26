@@ -63,6 +63,7 @@ html, body {
     background-color:$secondary;
     color:$primary;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 .nav-item{
     border-radius: 10px;
@@ -130,6 +131,17 @@ color: $secondary;
     border-radius: 10px;
     margin:2%;
 }
+
+.sub-button{
+    background-color: $primary;
+    color: $bg;
+    &:hover{
+        background-color: $secondary;
+        color: $bg !important;
+    }
+}
+
+
 
 @media screen and (min-width: 768px) {
 

@@ -10976,6 +10976,7 @@ body {
   background-color: #353535;
   color: #E48E0B;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .nav-item {
@@ -11049,6 +11050,16 @@ body {
 .postview img {
   border-radius: 10px;
   margin: 2%;
+}
+
+.sub-button {
+  background-color: #E48E0B;
+  color: #fff;
+}
+
+.sub-button:hover {
+  background-color: #353535;
+  color: #fff !important;
 }
 
 @media screen and (min-width: 768px) {
