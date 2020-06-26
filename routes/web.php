@@ -24,5 +24,7 @@ Route::get('/logout','LogoutController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/posts/create', 'PostController@create')->name('posts.create');
-Route::post('/posts', 'PostController@store')->name('posts.store');
+Route::get('profile/{id}/posts-create', 'PostController@create')->name('posts.create');
+Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');
+
+

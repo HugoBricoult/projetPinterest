@@ -8,15 +8,26 @@
                 <div class="card-header">Créer un post</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="../../profile/{{Auth::user()->id}}/posts-create"  enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
-                            <label for="title">title</label>
+                            <label for="title">Title</label>
 
                             <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
 
                             @error('title')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+
+                            <textarea id="description" class="form-control @error('description') is-invalid @enderror"  name="description"value="{{ old('description') }}" required autocomplete="description" autofocus></textarea>
+
+                            @error('description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

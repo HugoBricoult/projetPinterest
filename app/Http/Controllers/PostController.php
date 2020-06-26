@@ -2,17 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-
-    public function _construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -30,8 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-
-        return view('posts.create');
+        return view('/posts.create');
     }
 
     /**
@@ -42,19 +36,25 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
+        $data = request()->validate([
             'title'=>['required', 'string'],
+            'description'=>['required', 'string'],
             'image'=>['required', 'image']
-        ]);
+            ]);
 
         $imagePath = request('image')->store('uploads', 'public');
 
         auth()->user()->posts()->create([
-            'title' => $data['title'],
-            'image' => $imagePath
-        ]);
 
-        return redirect()->route('show.posts', ['user' => auth()->user()]);
+            'title' => $data['title'],
+            'image_link' => $imagePath,
+            'description' =>$data['description']
+        ]);
+        $post = Post::get()->toArray();
+        return view('accueil',compact('post'));
+
+        // return view('/');
+        // return redirect()->route('show.posts', ['user' => auth()->user()]);
     }
 
     /**
@@ -65,7 +65,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
     }
 
     /**
