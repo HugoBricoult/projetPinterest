@@ -23,6 +23,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('/css/marcofall.css')}}">
+    <style>
+    a:hover{
+    color:white;
+    text-decoration:none;
+    }
+    </style>
 </head>
 <body>
 
