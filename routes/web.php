@@ -24,3 +24,4 @@ Route::get('/logout','LogoutController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/post/{id}','PostController@index');
