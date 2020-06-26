@@ -8,17 +8,19 @@
     <title>Pinkerton</title>
     <link rel="stylesheet" href="{{URL::asset('/css/marcofall.css')}}">
 </head>
-<body class="row">
+<body>
 
-<div class="d-flex flex-wrap col-md-12">
+<div class="wf-container">
 
 @foreach($post as $data)
-    <article class="card col-md-3">
+    <article class="wf-box card">
         <h3>{{$data['title']}}</h3>
         <img src="{{$data['image_link']}}" alt="{{$data['description']}}">
     </article>
 @endforeach
+
 </div>
 
 </body>
+<script src="{{URL::asset('/js/waterfall.js')}}"></script>
 </html>
