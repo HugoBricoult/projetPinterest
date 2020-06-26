@@ -22,21 +22,21 @@ class ProfileController extends Controller
         switch($section){
             case "posts":
                 $post = User::find($id)->posts->toArray();
-                return view('profile.post', compact('post','user'))->with('id',$id);
+                return view('profile.post', compact('post','user'))->with('id',$id)->with('section',$section);
             break;
             case "posts-create":
                 $post = User::find($id)->posts->toArray();
-                return view('posts.create', compact('post','user'))->with('id',$id);
+                return view('posts.create', compact('post','user'))->with('id',$id)->with('section',$section);
             break;
             case "pint":
                 $posts_id = User::find($id)->pint->pluck('post_id');
                 $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();
-                return view('profile.pint', compact('pint','user'))->with('id',$id);
+                return view('profile.pint', compact('pint','user'))->with('id',$id)->with('section',$section);
             break;
             case "follow":
                 $user_id = User::find($id)->follow->pluck('user_follow_id');
                 $posts = Post::whereIn('author_id',$user_id)->latest()->get()->toArray();
-                return view('profile.follow', compact('posts','user'))->with('id',$id);
+                return view('profile.follow', compact('posts','user'))->with('id',$id)->with('section',$section);
             break;
         }
     }

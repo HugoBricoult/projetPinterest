@@ -35,10 +35,12 @@ class FollowController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create([
-            'user_id' => $request['id'],
-            'user_follow_id' => $request['target_id']
+        $input = $request->all();
+        Follow::create([
+            'user_id' => $input['id'],
+            'user_follow_id' => $input['target_id']
         ]);
+        return redirect('/profile/'.$input['id'].'/posts');
     }
 
     /**

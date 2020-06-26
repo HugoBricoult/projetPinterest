@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
 
     <!-- bannière -->
@@ -36,13 +37,18 @@
             @if(Auth::user()->id != $id)
                 <div class="col-2">
                     <div class="d-flex">
-                        <button onclick="" class="btn btn-lg pt-1 pb-1 font-weight-bold sub-button">S abonner</button>
+                        <button onclick="event.preventDefault();
+                        document.getElementById('sub-form').submit();" id="btn_follow" class="btn btn-lg pt-1 pb-1 font-weight-bold sub-button">S abonner</button>
                     </div>
                 </div>
+                <form id="sub-form" action="{{ route('follow.user',array('id' => $id,'section'=>$section )) }}" method="POST" style="display: none;">
+                    @csrf
+                    <input type="number" name="id" id="" value={{Auth::user()->id}}>
+                    <input type="number" name="target_id" id="" value={{$id}}>
+                </form>
             @endif
         @endauth
         
-
     </div>
 
     <div class="row">
@@ -103,31 +109,5 @@
 
 
 </div>
-<script>
-    let promise = fetch()->then(rs => rs.json());
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
 
-    $(".btn-submit").click(function(e){
-
-        e.preventDefault();
-
-        var name = $("input[name=name]").val();
-        var password = $("input[name=password]").val();
-        var email = $("input[name=email]").val();
-
-        $.ajax({
-           type:'POST',
-           url:"{{ route('ajaxRequest.post') }}",
-           data:{name:name, password:password, email:email},
-           success:function(data){
-              alert(data.success);
-           }
-        });
-
-    });
-</script>
 @endsection
