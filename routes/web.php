@@ -30,3 +30,5 @@ Route::get('/post',function (){
 });
 
 Route::get('/post/{id}','PostController@index');
+
+Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');

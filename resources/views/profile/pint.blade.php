@@ -1,5 +1,6 @@
 @extends('/layouts.layoutProfil')
 @section('profile_content')
+@auth
     <div class="card-columns">
         @php $i=0; @endphp
         @foreach ($pint as $objet)
@@ -8,4 +9,5 @@
         </div>
         @php $i++; @endphp
         @endforeach
+@endauth
 @endsection

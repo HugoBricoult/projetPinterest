@@ -24,6 +24,10 @@ class ProfileController extends Controller
                 $post = User::find($id)->posts->toArray();
                 return view('profile.post', compact('post','user'))->with('id',$id);
             break;
+            case "posts-create":
+                $post = User::find($id)->posts->toArray();
+                return view('posts.create', compact('post','user'))->with('id',$id);
+            break;
             case "pint":
                 $posts_id = User::find($id)->pint->pluck('post_id');
                 $pint = Post::whereIn('id',$posts_id)->latest()->get()->toArray();

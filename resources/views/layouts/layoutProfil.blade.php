@@ -31,11 +31,16 @@
         </div>
 
         <!-- button -->
-        <div class="col-2">
-            <div class="d-flex">
-                <button class="btn btn-lg pt-1 pb-1 font-weight-bold" style="background-color:#ffb443" >S abonner</button>
-            </div>
-        </div>
+        @auth
+            @if(Auth::user()->id != $id)
+                <div class="col-2">
+                    <div class="d-flex">
+                        <button class="btn btn-lg pt-1 pb-1 font-weight-bold sub-button">S abonner</button>
+                    </div>
+                </div>
+            @endif
+        @endauth
+        
 
     </div>
 
@@ -43,24 +48,38 @@
 
         <div class="col-1"></div>
 
-        <div class="col-10 pt-5 d-flex justify-content-around">
+        
 
-            <!-- Posts -->
-            <div class="">
-                <div class="h5 pt-2 ml-5 font-weight-bold"><a href="/profile/{{$id}}/posts" style="text-decoration:none; color:black">Posts</a></div>
-            </div>
+            @auth
+                @if(Auth::user()->id == $id)
+                    <div class="col-10 pt-5 d-flex justify-content-around">
+                        <!-- Posts -->
+                        <div class="">
+                            <div class="h5 pt-2 ml-5 font-weight-bold"><a href="/profile/{{$id}}/posts" style="text-decoration:none; color:black">Posts</a></div>
+                        </div>
 
-            <!-- epingle -->
-            <div class="">
-                <div class="h5 pt-2" style="visibility:visible"><a href="/profile/{{$id}}/pint" style="text-decoration:none; color:black">Epingles</a></div>
-            </div>
+                        <!-- epingle -->
+                        <div class="">
+                            <div class="h5 pt-2" style="visibility:visible"><a href="/profile/{{$id}}/pint" style="text-decoration:none; color:black">Epingles</a></div>
+                        </div>
 
-            <!-- abonnements -->
-            <div class="">
-                <div class="h5 pt-2 mr-5" style="visibility:visible"><a href="/profile/{{$id}}/follow" style="text-decoration:none; color:black">Abonnements</a></div>
-            </div>
+                        <!-- abonnements -->
+                        <div class="">
+                            <div class="h5 pt-2 mr-5" style="visibility:visible"><a href="/profile/{{$id}}/follow" style="text-decoration:none; color:black">Abonnements</a></div>
+                        </div>
+                    </div>
+                @else
+                    <!-- Posts -->
+                    <div class="col-10 pt-5 d-flex ml-5">
+                        <div class="">
+                            <div class="h5 pt-2 ml-5 font-weight-bold"><a href="/profile/{{$id}}/posts" style="text-decoration:none; color:black">Posts</a></div>
+                        </div>
+                    </div>
+                @endif
+            @endauth
+            
 
-        </div>
+        
 
         <div class="col-1"></div>
         
