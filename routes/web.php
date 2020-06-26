@@ -26,5 +26,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('profile/{id}/posts-create', 'PostController@create')->name('posts.create');
 Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');
-
-

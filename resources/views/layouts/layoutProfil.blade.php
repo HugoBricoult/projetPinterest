@@ -4,6 +4,7 @@
 
 <div class="container">
 
+
     <!-- bannière -->
     <div class="row mb-n5">
         <img src="https://wallup.net/wp-content/uploads/2015/12/268475-nature-landscape-forest-mist-puddle-frost-blue-shadow-morning-trees-dark-pine_trees.jpg" style="width:100%; height:200px">
@@ -33,7 +34,7 @@
         <!-- button -->
         <div class="col-2">
             <div class="d-flex">
-                <button class="btn btn-lg pt-1 pb-1 font-weight-bold" style="background-color:#ffb443" >S abonner</button>
+                <button class="btn btn-lg pt-1 pb-1 font-weight-bold" style="background-color:#ffb443" >S'abonner</button>
             </div>
         </div>
 
