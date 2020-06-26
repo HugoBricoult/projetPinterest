@@ -24,22 +24,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('/css/marcofall.css')}}">
 </head>
-
-<!-- nav -->
-
-<nav class="navbar navbar-light">
-    <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
-        <a class="nav-item nav-link " href="/">Accueil</a>
-    </div>
-</nav>
-
 <body>
 
+<!-- nav -->
+    <nav class="navbar navbar-light col-md-12 list-unstyled mb-3">
+        <li class="col-md-1 col-12 text-center">P</li>
+        <li class="nav-item nav-link col-md-1 col-12 text-center"><a href="/">Accueil</a></li>
 
     @if (Route::has('login'))
-            <div class="top-right links">
         @auth
-        <li class="nav-item dropdown profile">
+
+        <li class="dropdown profile offset-md-9 col-md-1 col-12 justify-content-center text-center">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             <i class="fa fa-user" aria-hidden="true"></i>  {{ Auth::user()->first_name }}<span class="caret"></span>
             </a>
@@ -54,14 +49,14 @@
                                 document.getElementById('logout-form').submit();">
                     {{ __('Se déconnecter') }}
                 </a>
-                
+
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>
         </li>
-        @else        
+        @else
             <a class="nav-item" href="{{ route('login') }}">Login</a>
 
             @if (Route::has('register'))
@@ -69,9 +64,8 @@
             @endif
 
         @endauth
-            </div>
     @endif
-
+</nav>
     @yield('content')
 
 </body>
