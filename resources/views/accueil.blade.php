@@ -4,11 +4,14 @@
 <div class="wf-container">
 
 @foreach($post as $data)
-    <article class="wf-box wf-card">
+
+    <a href="/post/{{$data['id']}}" class="wf-box wf-card" style="text-decoration: none !important;">
         <h3>{{$data['title']}}</h3>
         <img src="{{asset($data['image_link'])}}" alt="{{$data['description']}}">
-    </article>
+    </a>
+
 @endforeach
+
 
 </div>
 
