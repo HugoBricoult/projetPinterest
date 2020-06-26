@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Post;
 use Illuminate\Http\Request;
+
 
 
 class PostController extends Controller
@@ -13,9 +15,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $post=Post::findOrFail($id);
+        $user=User::findOrFail($post->author_id);
+        
+        $post['author_name']=$user->first_name;
+
+        return view('post',compact('post'));
     }
 
     /**
@@ -25,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('/posts.create');
     }
 
     /**
@@ -64,7 +71,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
     }
 
     /**

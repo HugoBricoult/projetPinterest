@@ -8,6 +8,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// GENERAL 
+
 html, body {
     background-color:$body-bg;
     color: $primary;
@@ -16,6 +18,7 @@ html, body {
     height:100vh;
     margin:0;
 }
+
 .full-height {
     height: 100vh;
 }
@@ -47,8 +50,6 @@ html, body {
 .links > a {
     color: #636b6f;
     padding: 0 25px;
-
-    
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -56,9 +57,25 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
-
+.navbar{ 
+    background-color:$secondary;
+    color:$primary;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
 .nav-item{
     border-radius: 10px;
+}
+#navbarDropdown{
+    border-radius: 10px;
+    color: $bg;
+    font-weight: bold;
+}
+#navbarDropdown:hover{
+background-color: $bg;
+font-weight: bold;
+color: $secondary;
+
 }
 .profile{
     display: flex;
@@ -101,6 +118,28 @@ html, body {
 }
 
 .wf-column { float: left; }
+
+// ARTICLES
+.postview {
+    width: 50% auto;
+    padding:1%;
+    margin:5%;
+    text-align: center;
+}
+.postview img {
+    border-radius: 10px;
+    margin:2%;
+}
+
+.sub-button{
+    background-color: $primary;
+    color: $bg;
+    &:hover{
+        background-color: $secondary;
+        color: $bg !important;
+    }
+}
+
 
 
 @media screen and (min-width: 768px) {

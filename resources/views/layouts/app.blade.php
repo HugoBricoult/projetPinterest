@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Pintareus') }}</title>
+    <title>{{ config('app.name', 'Le P') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,16 +18,18 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{URL::asset('/css/grid.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/marcofall.css')}}">
 </head>
 
 <!-- nav -->
 
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light">
     <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
-        <a class="nav-item nav-link" href="/">Accueil</a>
+        <a class="nav-item nav-link " href="/">Accueil</a>
     </div>
 </nav>
 
@@ -39,18 +41,20 @@
         @auth
         <li class="nav-item dropdown profile">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->first_name }}<span class="caret"></span>
+            <i class="fa fa-user" aria-hidden="true"></i>  {{ Auth::user()->first_name }}<span class="caret"></span>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
                 <a class="dropdown-item" href="/profile/{{Auth::user()->id}}/posts">
                     Profile
                 </a>
+                <a href="../../profile/{{Auth::user()->id}}/posts-create" class="dropdown-item">Créer un post</a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    {{ __('Se déconnecter') }}
+                </a>
+                
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -71,6 +75,7 @@
     @yield('content')
 
 </body>
+<script src="{{URL::asset('/js/waterfall.js')}}"></script>
 
 
 </html>

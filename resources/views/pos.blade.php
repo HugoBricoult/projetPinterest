@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 <form action="post" method="post" enctype="multipart/form-data">
     @csrf
 <input type="text" name="title">
@@ -6,3 +9,4 @@
 <input type="hidden" name="author_id" value="{{ Auth::user()->id }}">
 <input type="submit" value="Envoyer">
 </form>
+@endsection
