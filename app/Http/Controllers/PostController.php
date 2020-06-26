@@ -45,7 +45,7 @@ class PostController extends Controller
             $imageName = $imagePath->getClientOriginalName();
 
             $path = $request->file('file')->storeAs('uploads', $imageName, 'public');
-            $path = '/'.$path;
+            $path = 'storage/'.$path;
             Post::create([
                 'title' => $request['title'],
                 'description' => $request['description'],
