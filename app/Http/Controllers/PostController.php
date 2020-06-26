@@ -19,7 +19,7 @@ class PostController extends Controller
     {
         $post=Post::findOrFail($id);
         $user=User::findOrFail($post->author_id);
-        
+
         $post['author_name']=$user->first_name;
 
         return view('post',compact('post'));

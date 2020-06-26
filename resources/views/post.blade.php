@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="postview">
+<div class="container">
+    <div class="row d-flex flex-nowrap justify-content-center">
 
-<h2>{{$post['title']}}</h2>
+        <img class="col-md-4 m-0 p-0 rounded-left" src="{{ asset($post['image_link']) }}" alt="image du post selectionné">
 
-<h6>By : {{$post['author_name']}}</h4>
+            <div class="d-flex flex-wrap flex-column col-md-6 border border-grey rounded-right text-dark">
+                <h2>{{$post['title']}}</h2>
+                <p> {{$post['description']}} </p>
+                <a href="" class="btn btn-secondary">By:{{$post['author_name']}}</a>
+            </div>
 
-<img src="{{ asset($post['image_link']) }}" alt="image du post selectionné">
-
-<p> {{$post['description']}} </p>
-
-
+    </div>
 </div>
 
 

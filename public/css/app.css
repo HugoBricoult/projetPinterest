@@ -7527,7 +7527,7 @@ button.bg-dark:focus {
 }
 
 .justify-content-between {
-  justify-content: space-between !important;
+    justify-content: space-between !important;
 }
 
 .justify-content-around {
@@ -11040,7 +11040,7 @@ body {
   float: left;
 }
 
-.postview {
+.view {
   width: 50% auto;
   padding: 1%;
   margin: 5%;
