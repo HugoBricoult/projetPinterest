@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <div class="custom-file">
-                                <input type="file" name="image" class="custom-file-input @error('image') is-invalid @enderror" id="validatedCustomFile">
+                                <input type="file" name="file" class="custom-file-input @error('image') is-invalid @enderror" id="validatedCustomFile">
                                 <label class="custom-file-label" for="validatedCustomFile">Choisir une image</label>
                                 @error('image')
                                 <span class="invalid-feedback" role="alert">

@@ -50,8 +50,6 @@ html, body {
 .links > a {
     color: #636b6f;
     padding: 0 25px;
-
-    
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -70,7 +68,7 @@ html, body {
 }
 #navbarDropdown{
     border-radius: 10px;
-    color: $primary;
+    color: $bg;
     font-weight: bold;
 }
 #navbarDropdown:hover{
