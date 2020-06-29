@@ -142,7 +142,7 @@
         <div class="col-2">
         </div>
 
-        <div class="col-8"><hr style="height:2px; background-color:#F7DD94">
+        <div class="col-8"><hr style="height:2px; background-color:#cccccc">
         </div>
 
         <div class="col-2">
