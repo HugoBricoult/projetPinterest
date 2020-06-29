@@ -18,7 +18,7 @@ Route::get('/','AccueilController@index');
 
 Route::get('profile/{id}/{section}', 'ProfileController@show')->name('show.posts');
 
-//Route::post('profile/{id}/{section}','FollowController@store')->name('follow.user');
+Route::post('/profile/follow','FollowController@store')->name('follow.user');
 
 Auth::routes();
 
@@ -35,6 +35,7 @@ Route::get('/post/{id}','PostController@index');
 
 Route::post('profile/{id}/posts-create', 'PostController@store')->name('posts.store');
 
+Route::post('/update/profile/pictures','ProfileController@updateimg');
+Route::post('/update/profile/cover','ProfileController@updatecover');
 
 Route::get('profile/{id}/edit','EditController@edit')->name('profile.edit');
-Route::post('profile/{id}/edit','EditController@update');

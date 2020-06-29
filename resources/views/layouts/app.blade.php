@@ -28,7 +28,7 @@
 
 <!-- nav -->
     <nav class="navbar navbar-light col-md-12 list-unstyled mb-3">
-        <li class="col-md-1 col-12 text-center">P</li>
+        <li class="col-md-1 col-12 text-center">Paintesrestes</li>
         <li class="nav-item nav-link col-md-1 col-12 text-center fix"><a href="/">Accueil</a></li>
 
     @if (Route::has('login'))

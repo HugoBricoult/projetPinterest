@@ -67,8 +67,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $data['image_profile_link']='ptnzebi';
-        $data['image_cover_link']="ahoui";
+        $data['image_profile_link']='';
+        $data['image_cover_link']='';
         return User::create([
             'pseudo' => $data['pseudo'],
             'first_name' => $data['first_name'],
