@@ -1,72 +1,36 @@
 @extends('/layouts.layoutProfil')
 
+
+
 @section('profile_content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6 mt-5">
-            <div class="card back-login">
-                <h1 class="text-center mt-4">P</h1>
-                <p class="text-center">Que voulez vous modifier ?</p>
+<div class="row justify-content-center">
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('profile.edit',array('id'=>$id) )}}">
-                        @csrf
-                        @method('PATCH')
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-3">
-                                <input id="pseudo" type="text" class="form-control @error('pseudo') is-invalid @enderror" name="pseudo" value="{{ old('pseudo') }}" required autocomplete="pseudo" placeholder="Pseudo"autofocus>
-
-                                @error('pseudo')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-3">
-                                <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" placeholder="Nom "autofocus>
-
-                                @error('first_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-3">
-                                <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" placeholder="Prénom"autofocus>
-
-                                @error('last_name')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-3">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
+    <form action="{{ route ('profile.store',$user->id) }}" method="post" enctype="multipart/form-data">
+        <div class="form-group ">
+            @csrf
+            @method("PATCH")
+            <label  for="file">Avatar: </label>
+            <input type="file" name="image_profile_link" id="image" value="{{ $user->image_profile_link }}">
         </div>
-    </div>
-</div>
+        <div class="form-group">
+            <label for="file">Couverture: </label>
+            <input type="file" name="image_cover_link" id="image_cover" value="{{ $user->image_cover_link }}">
+        </div>
 
+        <div class="form-group">
+            <label for="pseudo">Pseudo: </label>
+            <input type="text" name="pseudo" value="{{ $user->pseudo }}">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" value="{{ $user->email }}">
+        </div>
+        <div class="form-group">
+            <input type="hidden" name="author_id" value="{{ Auth::user()->id }}">
+            
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
+</div>
 @endsection

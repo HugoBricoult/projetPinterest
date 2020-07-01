@@ -6,14 +6,14 @@
 
     <!-- bannière -->
     <div class="row mb-n5">
-        <img src="https://wallup.net/wp-content/uploads/2015/12/268475-nature-landscape-forest-mist-puddle-frost-blue-shadow-morning-trees-dark-pine_trees.jpg" style="width:100%; height:200px">
+        <img src="../../{{ $user->image_cover_link }}" style="width:100%; height:200px">
     </div>
 
     <div class="row align-items-baseline">
 
         <!-- avatar -->
         <div class="col-3" style="text-align:right">
-            <img src="https://scontent-bru2-1.xx.fbcdn.net/v/t31.0-1/p320x320/27709777_590150484666821_2107143794062119924_o.png?_nc_cat=110&_nc_sid=dbb9e7&_nc_ohc=zvj1iAMQtREAX8sv1LN&_nc_ht=scontent-bru2-1.xx&oh=afbf67d12d6c619f907386fabb1c2af7&oe=5F161A4D" style='width:200px' class='rounded-circle ml-5'>
+            <img src="../../{{ $user->image_profile_link }}" style='width:200px; height:200px' class='rounded-circle ml-5'>
         </div>
 
         <!-- pseudo -->
